@@ -6,4 +6,3 @@ output/
 src/wandb/
 .netrc
 wandb/
-data/
