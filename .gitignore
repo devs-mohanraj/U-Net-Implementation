@@ -2,7 +2,7 @@
 .vscode/
 .idea/
 data/isic_dataset/
-output/
+output/model_path/
 src/wandb/
 .netrc
 wandb/

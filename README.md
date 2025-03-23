@@ -1,4 +1,16 @@
-# U-Net Implementation for Image Segmentation
+# U-Net Implementation for Medical Image Segmentation
+
+## Table of Contents
+1. [Introduction](#1-introduction)
+2. [Project Overview](#2-project-overview)
+3. [Model Architecture](#3-model-architecture)
+4. [Dataset](#4-dataset)
+5. [Installation](#5-installation)
+6. [Training & Evaluation](#6-training--evaluation)
+7. [Results](#7-results)
+8. [Validation and Loss](#8-validation-and-loss)
+9. [Directory Structure](#9-directory-structure)
+10. [References](#10-references)
 
 ## 1. Introduction
 U-Net is a convolutional neural network (CNN) architecture designed for image segmentation tasks. It is widely used in applications such as medical image analysis and satellite image processing. This project implements U-Net for **Medical Image Segmentation** using **PyTorch**.
@@ -13,10 +25,7 @@ This project aims to develop a deep learning model based on the U-Net architectu
 - **Decoder**: Upsampling and reconstruction of segmented images
 - **Skip Connections**: Help retain spatial information
 
-
-
 ![U-Net Architecture](https://www.researchgate.net/publication/361357383/figure/fig2/AS:1168145503006721@1655518999463/Architecture-of-U-Net-with-dense-block.png)
-
 
 ## 4. Dataset
 - **Dataset Name**: [**Dataset**](https://challenge.isic-archive.com/data/#2018)
@@ -41,35 +50,44 @@ python train.py
 ```
 To evaluate the model:
 
-<span style="color:lightblue;">**Use inference.ipynb for visualization**</span>
+**Use inference.ipynb for visualization**
 
 ## 7. Results
 Performance metrics:
-
-- **Dice Coefficient**: **88.051** %
+- **Dice Coefficient**: **88.051%**
 
 Example segmentation results:
 
+**The segmentation of the Melanocytic lesion**
+![Melanocytic Lesion](data/images_for_readme/melanocytic_lesion.png)
 
-## 8. Validation and loss
-![**The Validation Dice Score**](/teamspace/studios/this_studio/output/outputs/W&B Chart 3_23_2025, 1_31_42 AM.png)
-![Validation Dice Score](/teamspace/studios/this_studio/output/outputs/W&B Chart 3_23_2025, 1_31_42 AM.png)
-### the Validation Dice score
-![Validation Dice Score](data/images_for_readme/W&B Chart 3_23_2025, 1_32_44 AM.png)
+**The Segmentation of the Final_Stage Melanoma**
+![Melanoma](data/images_for_readme/melanoma.png)
+
+## 8. Validation and Loss
+**The validation dice score**
+![The Validation Dice Score](data/images_for_readme/validation_dice_score.png)
+
+**The training Loss**
+![The Training Loss](data/images_for_readme/train_loss.png)
+
 ## 9. Directory Structure
 ```
-U-Net-Project/
-├── data/                  # Dataset folder
-├── models/                # Trained models
-├── scripts/               # Training and evaluation scripts
-├── notebooks/             # Jupyter Notebooks (if applicable)
-├── results/               # Output segmented images
-├── README.md              # Project documentation
-├── requirements.txt       # Dependencies
-├── train.py               # Training script
-├── predict.py             # Prediction script
-└── utils.py               # Helper functions
+unet_medical_segmentation/
+│── data/                   # Dataset folder
+│   ├── images/             # Raw medical images
+│   ├── masks/              # Corresponding segmentation masks
+│── src/                    # Source code
+│   ├── unet.py             # U-Net model implementation
+│   ├── dataset.py          # PyTorch Dataset class
+│   ├── train.py            # Training script
+│   ├── inference.ipynb     # Inference on new images
+│   ├── utils.py            # Utility functions (metrics, visualization)
+│── outputs/                # Output directory
+│   ├── model_weights/      # Saved models
+│── requirements.txt        # Required dependencies
+│── README.md               # Project documentation
 ```
 
 ## 10. References
-- **U-Net Paper**: [Ronneberger et al., 2015](https://arxiv.org/abs/1505.04597)
+- **U-Net Paper**: [Ronneberger et al., 2015](https://arxiv.org/pdf/1505.04597)
