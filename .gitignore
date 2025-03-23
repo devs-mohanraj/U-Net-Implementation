@@ -1,3 +1,9 @@
 .lightning_studio
 .vscode/
 .idea/
+data/isic_dataset/
+output/
+src/wandb/
+.netrc
+wandb/
+data/
