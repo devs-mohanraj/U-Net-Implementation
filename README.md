@@ -25,7 +25,7 @@ This project aims to develop a deep learning model based on the U-Net architectu
 - **Decoder**: Upsampling and reconstruction of segmented images
 - **Skip Connections**: Help retain spatial information
 
-![U-Net Architecture](https://www.researchgate.net/publication/361357383/figure/fig2/AS:1168145503006721@1655518999463/Architecture-of-U-Net-with-dense-block.png)
+![U-Net Architecture](data/images_for_readme/Architecture-of-U-Net-with-dense-block.png)
 
 ## 4. Dataset
 - **Dataset Name**: [**Dataset**](https://challenge.isic-archive.com/data/#2018)
