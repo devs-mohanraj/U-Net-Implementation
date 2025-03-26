@@ -38,8 +38,8 @@ This project aims to develop a deep learning model based on the U-Net architectu
 ## 5. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/devs-mohanraj/U-Net-.git
-cd U-Net-
+git clone https://github.com/devs-mohanraj/U-Net-Implementation.git
+cd U-Net-Implementation
 pip install -r requirements.txt
 ```
 
